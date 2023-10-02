@@ -9,7 +9,10 @@ from setuptools import setup
 
 APP = ['calculator.py']
 DATA_FILES = []
-OPTIONS = {}
+OPTIONS = {
+    'includes': ('python-dateutil', 'tkinter', 'datetime', 'calendar'),
+    'iconfile': 'image.png'
+}
 
 setup(
     app=APP,
@@ -17,5 +20,5 @@ setup(
     options={'py2app': OPTIONS},
     author='Yuliia Fedorchenko',
     author_email='julia.fdrchnk@gmail.com',
-    setup_requires=['py2app', 'python-dateutil==2.8.2'],
+    setup_requires=['py2app'],
 )
